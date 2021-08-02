@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[1,2,3,'a','b','o','e','g','k','l']
+    let arr1 = ['a','o','e','u','i'];
+    function find() {
+        let count = 0;
+        let check=false
+        for (i = 0; i < arr.length; i++) {
+            for(j=0;j<arr1.length;j++){
+            if(arr[i]==arr1[j])
+            {
+                check=true;
+                count++
+            }
+            }
+        }
+        if(check==true){
+            document.write('chuỗi có số các số nguyên âm là: '+count);
+        }
+        else{
+            document.write('chuỗi ko có số nguyên âm')
+        }
+    }
+    find()
+</script>
+</body>
+</html>
