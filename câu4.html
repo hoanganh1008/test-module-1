@@ -26,7 +26,7 @@
         return this.weight;
     }
     toString(){
-        return document.write("this animal's name is"+this.name + "weight is" +this.weight)
+        return document.write("this animal's name is: "+ this.name + '<br>' + "weight is: " +this.weight)
     }
   }
   let objAnimal1=new Animal();
@@ -35,6 +35,7 @@
   objAnimal1.toString()
   let objAnimal2=new Animal('cat',45);
   objAnimal2.setName('mouse');
+  objAnimal2.toString()
 </script>
 </body>
 </html>
