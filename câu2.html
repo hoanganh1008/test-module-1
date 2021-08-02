@@ -6,19 +6,30 @@
 </head>
 <body>
 <script>
-    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    let a = prompt('nhập số nguyên a');
-    for (let i = 0; i < arr.length; i++) {
-        if (a == arr[i]) {
-            document.write('vị trí của a là:' + i +'<br>')
-            document.write('số nguyên a thuộc mảng');
-            break;
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let isInArray = false;
+    let index;
+    let number = parseInt(prompt('nhập number'))
+
+    function findNum(number, arr) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === number) {
+                isInArray = true;
+                index = i;
+                break;
+            } else {
+                isInArray = false;
+            }
         }
-        else{
-            document.write('không tìm thấy số nào')
-            break;
+
+        if (isInArray) {
+            document.write(number + ' thuộc mảng và ở vị trí thứ: ' + index);
+        } else {
+            document.write(number + ' ko thuộc mảng');
         }
     }
+
+    findNum(number,numbers);
 </script>
 </body>
 </html>
